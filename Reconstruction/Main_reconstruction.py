@@ -17,7 +17,7 @@ The simulations should previously done with Main_simu.py.
 ###################################################
 
 #The name of the MCRICM stack
-filename = 'MCRICM_image.tif'
+filename = 'MCRICM_image_small.tif'
 
 #List of refractive indices for the cytosplasm in green
 #Decimal part only for simplicity (i.e. 340 -> 1.340)
