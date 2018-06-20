@@ -2,7 +2,6 @@ import numpy as np
 import os
 import multiprocessing
 from PIL import Image
-from scipy import ndimage
 from skimage import io
 
 pi = np.pi
@@ -141,8 +140,6 @@ def BestSol(hh_dict, dd_dict, chi2_dict):
         hh_Map[:,:,n] = hh_dict[n]
         dd_Map[:,:,n] = dd_dict[n]
         
-    
-    w = np.ndarray( shape = nmax )
     
     nin = np.zeros((imax, jmax))
     hh, dd, chi2 = (np.ndarray( shape = (imax, jmax)) for i in range(3))
