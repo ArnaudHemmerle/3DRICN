@@ -32,13 +32,19 @@ SimuFolder = '../Simulation/Simu'
 
 #Number of processors used
 #If multiprocessing does not work, try NbProc = 1
-NbProc = 3
+NbProc = 4
 
 #Define min, max, step of d and h in nm
 #Use the same parameters as your simulations for simplicity
 dmin = 0; dmax = 1000; dstep = 10 #d range
 hmin = 0; hmax = 500; hstep = 2 #h range  
 
+#Number of different illuminations
+NbIllum = 3*len(INA)
+
+#Rescaled h and d for calculations
+imax_d = int((dmax-dmin)/dstep)
+jmax_h = int((hmax-hmin)/hstep)
 
     
 
@@ -140,6 +146,7 @@ def BestSol(hh_dict, dd_dict, chi2_dict):
         hh_Map[:,:,n] = hh_dict[n]
         dd_Map[:,:,n] = dd_dict[n]
         
+
     
     nin = np.zeros((imax, jmax))
     hh, dd, chi2 = (np.ndarray( shape = (imax, jmax)) for i in range(3))
@@ -230,12 +237,6 @@ def save_img(img, name_img):
 
 if __name__ == '__main__':
 
-    #Number of different illuminations
-    NbIllum = 3*len(INA)
-    
-    #Rescaled h and d for calculations
-    imax_d = int((dmax-dmin)/dstep)
-    jmax_h = int((hmax-hmin)/hstep)
 
     #import file
     file0 = io.imread(filename)
