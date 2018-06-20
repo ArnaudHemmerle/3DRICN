@@ -1,7 +1,7 @@
 # MCRICM
 Code for reconstruction of MCRICM images of a lamellipodium.
 
-1) You first need to run simulations of the reflectivity for the various conditions (INA, wavelength, d, h, nin)
+1) You first need to run simulations of the reflectivity for the various conditions (INA, wavelength, d, h, nin).
 To do so, edit Main_simu.py to modify the parameters of the calculation and launch it with "python Main_simu.py"
 It will create a folder with all the results stored in python .npy files, which will be used for the reconstruction.
 
