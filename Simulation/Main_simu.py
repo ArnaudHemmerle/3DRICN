@@ -3,7 +3,6 @@ import os
 
 pi = np.pi
 
-
 """
 Run this program before doing the reconstruction.
 It simulates the reflectivity for all the combinations
