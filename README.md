@@ -1,5 +1,5 @@
 # 3DRICN
-Code for reconstruction of 3DRICN images of a lamellipodium.
+Code for reconstruction of 3DRICN images of a lamellipodium. See Dejardin et al. DOI: 10.1021/acs.nanolett.8b03134
 
 1) You first need to run simulations of the reflectivity for the various conditions (INA, wavelength, d, h, nin).
 To do so, edit Main_simu.py to modify the parameters of the calculation and launch it with "python Main_simu.py"
